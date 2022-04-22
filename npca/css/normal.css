@@ -1,0 +1,61 @@
+@charset 'UTF-8';
+@import url('base.css');
+
+/*ページの全体の設定*/
+body {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	background-color: #000000;
+	background-image: url('../image/normal/back.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-size: medium;
+	font-size: 90%;
+	font-family: 'ＭＳ ゴシック', monospace;
+	color: #353535;
+}
+
+
+/* リンク色指定 */
+a:link, a:focus {
+	text-decoration: none;
+	border-bottom: 1px dashed #465501;
+	color: #465501;
+}
+a:visited {
+	text-decoration: none;
+	border-bottom: 1px dashed #B16833;
+	color: #B16833;
+}
+a:hover, a:active {
+	text-decoration : none ;
+	border-bottom : 1px solid #be0000 ;
+	color: #be0000 ;
+}
+
+/* 著作権表記 */
+address {
+	width: 800px;
+	background-color: #000000;
+	color: #ffffff;
+	margin: 0px auto;
+	text-align: center;
+	font-size: small;
+	font-style: normal;
+	font-family: 'Times New Roman', selif;
+	clear: both;
+}
+
+/*著作権表記内のリンク*/
+#copyright a {
+	color: #aaaaff;
+	text-decoration: none;
+	border-bottom-style: none;
+}
+
+#copyright a:hover {
+	color: #ffaaaa;
+	text-decoration: none;
+	border-bottom-style: none;
+}

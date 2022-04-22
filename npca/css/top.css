@@ -1,0 +1,62 @@
+@charset 'UTF-8';
+@import url('basic.css');
+
+div.cont {
+	/*background: url(../image/normal/top/back_px.png) repeat;*/
+	background: none;
+}
+.contlink a {
+	background-image: url(../image/normal/top/cont_back.png);
+}
+ul.pull_down li a {
+	background-image: url(../image/normal/top/sub_menu_back.png);
+}
+ul.pull_down li.menu_top {
+	background-image: url(../image/normal/top/sub_menu_top.png);
+}
+ul.pull_down li.menu_bottom {
+	background-image: url(../image/normal/top/sub_menu_buttom.png);
+	height: 20px;
+}
+div.main {
+	width: 800px;
+	background: url(../image/normal/top/back_px.png) repeat;
+}
+div#message {
+	width: 800px;
+	height: 30px;
+	float: left;
+	background: url(../image/normal/top/message.png) no-repeat;
+}
+div#message p {
+	padding: 7px 0 0 160px;
+}
+div#message p span {
+	font-weight: bold;
+}
+div#school_festival {
+	float: left;
+	width: 480px;
+	height: 300px;
+}
+div#newest_activity	{
+	float: right;
+	width: 320px;
+}
+div#newest_activity div#update_title {
+	width: 320px;
+	height: 60px;
+	background: url(../image/normal/top/update_back_top.png) no-repeat;
+}
+div#newest_activity div#update {
+	background: url(../image/normal/top/update_back.png) repeat-y;
+	padding: 0 30px;
+	color: #000000;
+	min-height: 217px;
+}
+div#newest_activity p.text_gone {
+	display: block;
+	width: 320px;
+	height: 23px;
+	background: url(../image/normal/top/update_back_buttom.png) no-repeat;
+}

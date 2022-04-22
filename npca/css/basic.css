@@ -1,0 +1,545 @@
+@charset 'UTF-8';
+@import url('normal.css');
+
+/*ラベル部分のスタイルを定義します*/
+
+div.label {
+	display: block;
+	width: 800px;
+	height: 100px;
+}
+
+.label img{
+	display: block;
+	position: absolute;
+}
+
+.label a {
+	width: 320px;
+	height: 100px;
+}
+
+/*これより下目次部分の設定*/
+
+/*目次全体の設定*/
+div.cont {
+	width: 800px;
+	margin: 0 auto;
+	background-color: #000000;
+}
+
+/*目次のアイコンのリスト設定*/
+ul.contlink {
+	display: block;
+	width: 800px;
+	margin: 0 auto;
+}
+
+/*目次のリンクのサイズ、背景を設定*/
+.contlink a {
+	display: block;
+	width: 160px;
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+	border-bottom-style: none;
+	background-image: url(../image/normal/cont/back.png);
+	background-position: 0px 0px;
+}
+
+/*liのサイズを固定*/
+.contlink li {
+	display: block;
+	float: left;
+	width: 160px;
+	height: 40px;
+}
+
+/*現在のページはくぼめる*/
+a.current {
+	background-position: 0px -80px;
+}
+a.current:hover {
+	background-position: 0px -40px;
+}
+a.current:active {
+	background-position: 0px -80px;
+}
+
+/*各リンクのアクションを設定*/
+/*.contlink a:link {
+	background-position: 0px 0px;
+}*/
+.contlink a:hover {
+	background-position: 0px -40px;
+}
+.contlint a:active {
+	background-position: 0px -80px;
+}
+
+/*ここからプルダウンメニュー*/
+ul.contlink li ul.pull_down {
+	list-style-type: none;
+	display: none;
+}
+ul.contlink li:hover ul.pull_down {
+	display: block;
+	position: absolute;
+	z-index: 100;
+}
+ul.pull_down li a {
+	width: 150px;
+	height: 40px;
+	background-image: url(../image/normal/pull_down/back.png);
+	line-height: 40px;
+	padding-left: 10px;
+	font-size: 110%;
+	color: #eeeeee;
+}
+ul.pull_down li a:hover {
+	color: #353535;
+}
+ul.pull_down li {
+	clear: both;
+}
+ul.pull_down li.menu_bottom {
+	width: 160px;
+	height: 10px;
+	background-image: url(../image/normal/pull_down/menu_bottom.png);
+}
+ul.pull_down li.menu_top {
+	width: 160px;
+	height: 20px;
+	background-image: url(../image/normal/pull_down/menu_top.png);
+}
+ul.pull_down li.menu_bottom p, ul.pull_down li.menu_top p {
+	visibility: hidden;
+}
+
+/*ここまでプルダウンメニュー*/
+
+/*ここまで目次部分の設定*/
+
+/*ここから内容本体の設定*/
+
+/*内容全体を中央に寄せるなど*/
+div.main {
+	width: 800px;
+	margin: 0 auto;
+	background-color: #ffffff;
+}
+
+p.main {
+	margin : 1em auto ;
+	width : 700px ;
+	text-indent : 1.15em ;
+	line-height : 1.4em ;
+}
+
+/*ここまで内容本体の設定*/
+
+div#all_main {
+	width: 800px;
+	float: left;
+	background-color: #000000;
+}
+
+/*本文とindex全体の幅を指定*/
+div#l_main {
+	width: 640px;
+	float: left;
+	background: #000000 url(../image/normal/side/side_text.png) repeat-y 30px 10px;
+}
+
+/*左端のindexを定義します*/
+div#index_box {
+	position: fixed;
+	width: 160px;
+	color: #ffffff;
+	font-family: 'ＭＳ ゴシック', monospace;
+	font-size: 80%;
+	float: left;
+	padding-top: 10px;
+}
+#index_title {
+	width: 115px;
+	height: 17px;
+	background-image: url(../image/normal/index/index_title.png);
+	background-repeat: no-repeat;
+	padding-left: 45px;
+	padding-top: 3px;
+}
+#index_space {
+	display: block;
+	width: 160px;
+	height: 10px;
+	background-image: url(../image/normal/index/index_space.png);
+}
+
+#index_space span,#index_bottom span {
+	visibility: hidden;
+}
+
+#index_bottom {
+	display: block;
+	width: 160px;
+	height: 20px;
+	background-image: url(../image/normal/index/index_bottom.png);
+}
+
+ul.index_list {
+	width: 160px;
+	list-style-position: inside;
+	background-repeat: repeat-y;
+	background-image: url(../image/normal/index/index_list.png);
+}
+
+.index_list li {
+	color: #000000;
+	width: 147px;
+	height: 18px;
+	padding-left: 13px;
+	padding-top: 2px;
+}
+
+.index_list a {
+	color: #000000;
+	text-decoration: none;
+	border-bottom-style: none;
+}
+.index_list a:hover {
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom-style: none;
+}
+
+/*本文を定義します*/
+div.main_box {
+	width: 440px;
+	float: right;
+	background-color: #ffffff;
+	padding: 20px;
+	font-family: 'ＭＳ ゴシック', monospace;
+	line-height: 1.3em;
+	letter-spacing: 0.1em;
+}
+.main_box p {
+	text-indent: 0.5em;
+}
+.main_box ul{
+	margin: 1em auto;
+	line-height: 1.0em;
+	width: 400px;
+}
+.main_box img {
+	text-align: center;
+}
+p.noindent {
+	text-indent: 0;
+}
+.main_box h1 {
+	margin: 10px 0;
+	font-size: large;
+}
+.main_box h2 {
+	font-size: 110%;
+	margin-top: 30px;
+}
+.main_box h3 {
+	font-size: 100%;
+}
+.main_box ul li {
+	padding-top: 5px;
+}
+
+/*右サイドの定義をします*/
+
+div#side {
+	width: 160px;
+	float: right;
+	color: #000000;
+	padding-top: 10px;
+}
+
+#side h1 {
+	font-size: medium;
+	font-size: 80%;
+}
+#side p {
+	font-size: medium;
+	font-size: 80%;
+	text-indent: 1.0em;
+}
+
+#side_mes {
+	display: block;
+	width: 160px;
+	height: 20px;
+	background-image: url(../image/normal/side/side_mes.png);
+}
+#side_mes span {
+	visibility: hidden;
+}
+#side_mes a {
+	display: block;
+	width: 160px;
+	height: 20px;
+	border-bottom-style: none;
+}
+#side_space {
+	display: block;
+	width: 160px;
+	height: 20px;
+	background-image: url(../image/normal/side/side_space.png);
+}
+#side_space span {
+	visibility: hidden;
+}
+div.side_mes_text {
+	width: 120px;
+	float: left;
+	display: inline;
+	background-image: url(../image/normal/side/side_back.png);
+	background-repeat: repeat-y;
+	padding: 0 20px;
+	font-family: 'ＭＳ ゴシック', monospace;
+}
+#side_bottom {
+	clear: both;
+	display: block;
+	width: 160px;
+	height: 30px;
+	background-image: url(../image/normal/side/side_bottom.png);
+}
+#side_bottom span {
+	visibility: hidden;
+}
+
+/*部員作品のページ*/
+.type_title span {
+	visibility: hidden;
+}
+.type_title p a {
+	display: block;
+	width: 480px;
+	height: 100px;
+}
+.type_title p {
+	display: block;
+}
+.title_top {
+	width: 480px;
+	height: 30px;
+	background-image: url(../image/normal/works/title_top.png);
+}
+#title_program {
+	width: 480px;
+	height: 100px;
+	background-image: url(../image/normal/works/title_program.png);
+}
+#title_image {
+	width: 480px;
+	height: 100px;
+	background-image: url(../image/normal/works/title_image.png);
+}
+#title_movie {
+	width: 480px;
+	height: 100px;
+	background-image: url(../image/normal/works/title_movie.png);
+}
+#title_tech {
+	width: 480px;
+	height: 100px;
+	background-image: url(../image/normal/works/title_tech.png);
+}
+.title_space {
+	width: 480px;
+	height: 20px;
+	background-image: url(../image/normal/works/title_space.png);
+}
+div.type_title {
+	margin: 20px -20px;
+}
+div.type_title ul {
+	margin: 0;
+	width: 480px;
+	list-style-position: inside;
+	list-style-type: none;
+	background-repeat: repeat-y;
+	background-image: url(../image/normal/works/title_list.png);
+	font-size: large;
+}
+.title_list li {
+	width: 415px;
+	height: 30px;
+	padding-left: 35px;
+	margin-left: 30px;
+	font-weight: bold;
+	background-image: url(../image/icon/search.png);
+	background-repeat: no-repeat;
+}
+.title_bottom {
+	width: 480px;
+	height: 50px;
+	background-image: url(../image/normal/works/title_bottom.png);
+}
+
+.search_list {
+	list-style-type: none;
+}
+.search_list li {
+	height: 30px;
+	padding-left: 35px;
+	margin-left: 0;
+	font-weight: bold;
+	background-image: url(../image/icon/search.png);
+	background-repeat: no-repeat;
+}
+
+/*活動記録の検索*/
+ul#search_list {
+	margin: 0;
+	width: 440px;
+	list-style-position: inside;
+	list-style-type: none;
+	font-size: 80%;
+}
+#search_list li {
+	width: 415px;
+	height: 25px;
+	padding-top: 5px;
+	padding-left: 35px;
+	margin-left: 30px;
+	background-image: url(../image/icon/search.png);
+	background-repeat: no-repeat;
+}
+#search_list li#form {
+	background-image: none;
+	height: 50px;
+}
+#search_list li span, #search_list li a {
+	font-size: 120%;
+	font-weight: bold;
+}
+#search_list li span {
+	float: left;
+}
+form#text_search {
+	display: block;
+	margin-top: -5px;
+	margin-left: 100px;
+}
+form#text_search input#text {
+	width: 150px;
+	margin-top: -10px;
+}
+form#period_search input#s_year {
+	width: 30px;
+}
+form#search {
+	margin-left: 30px;
+	padding-left: 40px;
+	background-image: url(../image/icon/search.png);
+	background-repeat: no-repeat;
+	line-height: 30px;
+}
+#search span#s_title {
+	font-weight: bold;
+	font-size: 120%;
+}
+#search #text {
+	width: 190px;
+}
+#search #year {
+	width: 30px;
+}
+#search #submit {
+	margin-left: 250px;
+}
+
+/*更新履歴の表示*/
+ul.update_log {
+	list-style-type: none;
+}
+ul.update_log li {
+	padding-bottom: 20px;
+}
+ul.update_log li.update_date {
+	clear: both;
+	width: 100px;
+	float: left;
+}
+ul.update_log li.update_text {
+	width: 300px;
+	float: right;
+}
+h1#OLD {
+	clear: both;
+}
+
+/*お知らせ関連*/
+.mes_imp {
+	background: #ff0000;
+	color: #ffffff;
+}
+.mes_nor {
+	background: #0000ff;
+	color: #ffffff;
+}
+
+/*旧サイトへのリンク*/
+a#old_site_link {
+	border-bottom-style: none;
+}
+a#old_site_link img {
+	padding-top: 30px;
+}
+
+/*部誌関連*/
+ul.magazine_block {
+	padding-left: 30px;
+}
+ul.magazine_block li {
+	padding-top: 5px;
+}
+
+p.column {
+	border : 2px solid #BED66A ;
+	padding : 15px ;
+	width : 410px ;
+	text-indent : 1.1em ;
+	font-size : small ;
+	letter-spacing : 0.1em ;
+}
+p.note {
+	margin : .2em auto ;
+	border-bottom : 1px dashed #BED66A ;
+	letter-spacing : 0.1em ;
+}
+
+table#CODECS {
+	width : 25em ;
+	text-align : center ;
+}
+#CODECS th {
+	border-bottom : 1px solid #000 ;
+}
+#CODECS th.codec, #CODECS td.codec {
+	border-right : 1px solid #000 ;
+}
+
+table#fps24, table#fps30 {
+	width : 440px ;
+}
+td.fps {
+	width : 140px ;
+}
+
+p.note span {
+	text-decoration: underline;
+}
+
+ol {
+	padding-left: 40px;
+}
